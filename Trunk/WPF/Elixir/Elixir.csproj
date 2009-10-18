@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{637452BF-A228-4915-87E1-C19B3968F5D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Elixir</RootNamespace>
+    <AssemblyName>Elixir</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bind.cs" />
+    <Compile Include="Binders.cs" />
+    <Compile Include="CommandBinder.cs" />
+    <Compile Include="ConventionalViewBinder.cs" />
+    <Compile Include="DefaultEventMapping.cs" />
+    <Compile Include="DefaultPropertyMapping.cs" />
+    <Compile Include="ExpressionAccessor.cs" />
+    <Compile Include="ExpressionInvoker.cs" />
+    <Compile Include="ExpressionUtils.cs" />
+    <Compile Include="IActionInvoker.cs" />
+    <Compile Include="IBinder.cs" />
+    <Compile Include="IBinderDefinition.cs" />
+    <Compile Include="IBinderGetters.cs" />
+    <Compile Include="IDependencyPropertyBinder.cs" />
+    <Compile Include="IDependencyPropertyBinderDefinition.cs" />
+    <Compile Include="IFrameworkElementBinder.cs" />
+    <Compile Include="IMapping.cs" />
+    <Compile Include="IMethodBinder.cs" />
+    <Compile Include="ITemplateBinder.cs" />
+    <Compile Include="IValueAccessor.cs" />
+    <Compile Include="IValueBinder.cs" />
+    <Compile Include="IValueBinderDefinition.cs" />
+    <Compile Include="IViewBinderFluent.cs" />
+    <Compile Include="ListBinderDefinition.cs" />
+    <Compile Include="prism\DelegateCommand.cs" />
+    <Compile Include="prism\DelegateCommand.Desktop.cs" />
+    <Compile Include="prism\IActiveAware.cs" />
+    <Compile Include="ShortcutBinder.cs" />
+    <Compile Include="ListBinder.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="MethodBinder.cs" />
+    <Compile Include="MethodInfoInvoker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyInfoAccessor.cs" />
+    <Compile Include="StateGroupBinder.cs" />
+    <Compile Include="TemplateBinder.cs" />
+    <Compile Include="TemplateBinderExtensions.cs" />
+    <Compile Include="TemplateInitializedEventArgs.cs" />
+    <Compile Include="ValueBinder.cs" />
+    <Compile Include="ValueBinderDefinition.cs" />
+    <Compile Include="ViewBinder.cs" />
+    <Compile Include="ViewBinderDisplay.xaml.cs">
+      <DependentUpon>ViewBinderDisplay.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ViewBinderDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

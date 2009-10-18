@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="ElixirTests.OrderView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="300" Width="300">
+    <StackPanel>
+        <TextBox x:Name="FirstName" Text="FirstName"/>
+        <ListBox x:Name="Categories" Height="40"/>
+        <ListBox x:Name="Customers" Height="40"/>
+        <Button x:Name="Save" Content="Save"/>
+    </StackPanel>
+</UserControl>
